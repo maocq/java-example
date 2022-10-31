@@ -8,10 +8,9 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class GetPostUseCase {
 
-    //private final PostGateway postGateway;
+    private final PostGateway postGateway;
 
     public Mono<Post> get() {
-        //return postGateway.get();
-        return Mono.empty();
+        return postGateway.get();
     }
 }

@@ -1,5 +1,6 @@
 package com.maocq.api;
 
+import com.maocq.model.post.Post;
 import com.maocq.usecase.getpost.GetPostUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,6 @@ public class Handler {
     }
 
     public Mono<ServerResponse> listenGETUseCase(ServerRequest serverRequest) {
-        //getPostUseCase.get();
-        return ServerResponse.ok().bodyValue("Use case");
+        return ServerResponse.ok().body(getPostUseCase.get(), Post.class);
     }
 }
