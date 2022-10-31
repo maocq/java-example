@@ -4,4 +4,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'io.micrometer:micrometer-core'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    testImplementation "com.squareup.okhttp3:okhttp:$okHttp3Version"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$okHttp3Version"
 }
